@@ -56,7 +56,7 @@ Today, Rossmann is the largest drugstore in Germany. Rossmann store managers are
 
 <p> We were given sales data for 1115 Rossmann drugstores over a time period of two years. After exploring the data, we found that for 184 days in the two year period, 180 stores were temporarily closed for refurbishment. Thus, in order to build a model, we needed to fill in the data for these stores when they were closed. The parameters in the given dataset were Store (ID of store), DayOFWeek (M, T, W, T, F, S, S), Date (Month-Date-Year), Sales (in dollars), Customers (number of customers), Open (if the store was open or closed that day), Promo (if the store was holding a promotion), StateHoliday (if the day was a state holiday), SchoolHoliday (if the day was a school holiday). Our initial model for this step to fill in the missin dat was to use KNN (such as estimating sales using the sales of the open stores on that date, or data from that specific store using the closest dates) and Logistic Regression (converting the date timestamps into integers in order to model the time series data). Ultimately, due to constraints on computing power (in the case of KNN) and a goal of maximizing accuracy, we decided to interpolate and fill in the missing data in the following manner: 1) For Sales and Customers data, we take the median value across other data points with similar or matching values for the DayOfWeek, Promo, and Open predictors. 2) For binary predictors such as StateHoliday or SchoolHoliday, we inpute whatever the majority vote across all stores for that day was.
 </p>
-<img src="images/ross3.png" alt="Mountain View" align="middle" style="width:904px"><p>
+<img src="images/ross3.png" alt="Mountain View" align="middle" style="width:1104px"><p>
 In the image above, the left hand image shows the number of stores open per day, and the 184 day period where a fraction of the stores were closed for refurbishment is evident. On the right is the date vs. sales graph for one of the stores that underwent reburbishment (Store 13), and we can see the sharp drop in the graph during that period.
 </p>
 
@@ -64,7 +64,7 @@ In the image above, the left hand image shows the number of stores open per day,
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>More Data Exploration: Important Trends
 </h3>
 
-<img src="images/ross4.png" alt="Mountain View" align="middle" style="width:704px">
+<img src="images/ross4.png" alt="Mountain View" align="middle" style="width:904px">
 
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Predicting Customers and Sales</h3>
