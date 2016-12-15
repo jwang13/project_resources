@@ -76,7 +76,7 @@ In order to build a model to predict Rossmann sales, we needed to create a two-s
 
 
 <h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Extra date features, separate model for each store</h3>
+<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature Engineering + separate model for each store</h3>
 <p>
 We also looked at correlations for each store between sales on certain days and sales on days past, and found that sales from multiples of 7 days ago were strongly correlated with each other - that is, sales from 7 days ago, 14 days ago, 35 days ago, etc. were all correlated with each other. This makes sense intuitively, as behavior on a weekly basis tends to be stable, from Monday compared to Monday, from Thursday compared to Thursday.
 </p>
@@ -88,7 +88,7 @@ By focusing on each store individually, and adding year, month, day, and quarter
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Final Model + Results</h3>
 <p>
-We explored multiple models in our process of creating a final model for accurate Rossmann Store Sales prediction. Some of the models that we built but did not decide to use as our final model include Vector Autoregression (which did not produce very accurate results) and Decision Trees (we realized that tree based models such as Random Forests would require first placing sales data into buckets). Ultimately, we decided to use a Feature Engineering based model as our final model. In this model, we found the average number of customers, for each store, across all days, and then appended this data as part of a new feature. Below, we see that Feature Engineering greatly increased the accuracy from the baseline model.
+We explored multiple models in our process of creating a final model for accurate Rossmann Store Sales prediction. Some of the models that we built but did not decide to use as our final model include Vector Autoregression (which did not produce very accurate results) and Decision Trees (we realized that tree based models such as Random Forests would require first placing sales data into buckets). Ultimately, we decided to use a Feature Engineering based model (with the features as our final model year, month, day, quarter). In this model, we found the average number of customers, for each store, across all days, and then appended this data as part of a new feature. Below, we see that Feature Engineering greatly increased the accuracy from the baseline model.
 
 
 </p>
