@@ -81,10 +81,11 @@ In order to build a model to predict Rossmann sales, we needed to create a two-s
 We also looked at correlations for each store between sales on certain days and sales on days past, and found that sales from multiples of 7 days ago were strongly correlated with each other - that is, sales from 7 days ago, 14 days ago, 35 days ago, etc. were all correlated with each other. This makes sense intuitively, as behavior on a weekly basis tends to be stable, from Monday compared to Monday, from Thursday compared to Thursday.
 </p>
 <img src="images/ross7.png" alt="Mountain View" align="middle" style="width:504px">
+<p>
 To take some of these patterns over time into account, we added a few features to the dataset: the year, the month, the day, and the quarter. Finally, we built a separate linear regression model for each store, relying on its sales and customer patterns over time, along with these extra features to predict sales and customer traffic on test dates.
 
 By focusing on each store individually, and adding year, month, day, and quarter as features, we were able to see a substantial gain in the R2 score for predicting sales figures (0.790668889002), while maintaining a solid R2 for predicting customers (0.81661110172). This is consistent with the idea, expressed earlier, that using the dates as features would take advantage of the correlations between dates for sales and customer figures.
-
+</p>
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Final Model + Results</h3>
 <p>
